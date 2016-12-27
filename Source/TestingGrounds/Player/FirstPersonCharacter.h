@@ -54,10 +54,18 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	class UAnimMontage* FireAnimation;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+	TSubclassOf<class ARifle_Mk2> GunBlueprint;
+
+private:
+
+	ARifle_Mk2* Rifle;
+
+
 protected:
 	
 	/** Fires a projectile. */
-	void OnFire();
+	//void OnFire();
 
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
